@@ -1,0 +1,7 @@
+.background{
+    display: flex;
+    height: 90vh;
+    background-image: url('./images/back4.png');
+    background-size: cover;
+    opacity: 70%;
+}
