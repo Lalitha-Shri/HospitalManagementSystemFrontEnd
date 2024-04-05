@@ -3,11 +3,14 @@ import doctors from './images/doctors.png'
 import quote from './images/quote.png'
 import { useNavigate } from 'react-router-dom'
 const DoctorDashboard = () => {
+  //react hook
   const navigate=useNavigate();
+  //when "Go to Patients List to add prescription" button is clicked navigate to PatientDoctorList component
   const handleViewPatient=(e)=>{
     e.preventDefault();
     navigate("/listDoctorPatient");
   }
+   //when "  Go to Patients List to cancel appointments" button is clicked navigate to ViewAppointment component
     const handleCancelPatient=(e)=>{
       e.preventDefault();
       navigate("/viewAppointment");
