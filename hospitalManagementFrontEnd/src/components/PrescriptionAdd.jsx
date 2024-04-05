@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { addMedicines, getAppointmentById } from './Booking';
 
 const PrescriptionAdd = () => {
+    //React Hook
     const navigate = useNavigate();
     const [patientName, setPatientName] = useState("");
     const [appoinmentDate, setAppointmentDate] = useState("");
@@ -13,7 +14,7 @@ const PrescriptionAdd = () => {
     const[count,setcount]=useState(1);
     const {id}=useParams();
 
-   
+   //useEffect to get appointmnet by id
     useEffect(() => {
        getAppointments();
         
@@ -28,6 +29,7 @@ const PrescriptionAdd = () => {
           console.error(error);
         }
       };
+    //will add the medicine list to medication entity DB
       const addMedicine = async (e) => {
         e.preventDefault();
         const medicines1 = {
