@@ -5,8 +5,10 @@ import {  getAllPatient } from './PatientService';
 import { getAllAppointment } from './Booking';
 
 const PatientDoctorList = () => {
+  //React Hook
   const [patients, setPatient] = useState([]);
   const navigate=useNavigate();
+  //useEffect to get all appointment when page loads
   useEffect(() => {
     listDoctor();
   }, []);
@@ -20,6 +22,7 @@ const PatientDoctorList = () => {
       console.error(error);
     }
   };
+  //when addprescription button is clicked will navigate to PrescriptionAdd component
   const handlePrescription=(id)=>{
     navigate(`/addPrescription/${id}`);
   }
