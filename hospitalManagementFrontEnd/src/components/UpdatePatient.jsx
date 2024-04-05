@@ -4,6 +4,7 @@ import { getPatient, updatePatient } from "./PatientService";
 import Swal from "sweetalert2";
 
 const UpdatePatient = () => {
+  //React Hooks
   const { id } = useParams();
   const navigate = useNavigate();
   const [patientName, setPatientName] = useState("");
@@ -11,7 +12,7 @@ const UpdatePatient = () => {
   const [problem, setProblem] = useState("");
   const [contactNo, setContactNo] = useState();
   const [age, setAge] = useState();
-
+//To make update api call to update patient list to backend
   const updatePatients = async (e) => {
     console.log("clicked");
     e.preventDefault();
