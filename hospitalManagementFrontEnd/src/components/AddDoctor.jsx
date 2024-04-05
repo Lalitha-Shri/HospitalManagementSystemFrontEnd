@@ -63,7 +63,7 @@ const AddDoctor = () => {
     else{
 
     
-    await addDoctor(doc); //API call to make put API call to spring boot
+    await addDoctor(doc); //API call to make post API call to spring boot
     navigate("/admin");
     let timerInterval;
 Swal.fire({
