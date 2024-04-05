@@ -6,10 +6,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const PrescriptionList = () => {
+    //React Hook
     const {patientName}=useParams();
     const[patientPrescription,setPatientPrescription]=useState([]);
     const[display,setDisplay]=useState(false);
     const navigate=useNavigate();
+    //useEffect will get the medication list based on patient name
     useEffect(() => {
         const fetchData = async () => {
             try {
