@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 
 const ViewPrescriptions = () => {
+  //React Hooks
   const[patientName,setPatientName]=useState("");
   const navigate=useNavigate();
   const[prescription,setPrescription]=useState(false);
