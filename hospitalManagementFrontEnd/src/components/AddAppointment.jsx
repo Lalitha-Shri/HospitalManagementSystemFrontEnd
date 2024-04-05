@@ -5,6 +5,7 @@ import { addAppointment } from './Booking';
 import Select from "react-select";
 import Swal from "sweetalert2";
 const AddAppointment = () => {
+    //React hooks
     const {id}=useParams();
     const[doctorName,setDoctorname]=useState("");
     const[prescription1,setPrescription]=useState("");
@@ -19,6 +20,7 @@ const AddAppointment = () => {
    
     const[cancelStatus,setCancelStatus]=useState(false);
     const navigate=useNavigate();
+    //select option list
     const optionsFrom = [
       { value: "4-5 pm", label: "4-5 pm" },
       { value: "5-6 pm", label: "5-6 pm" },
@@ -28,6 +30,7 @@ const AddAppointment = () => {
 
 
     const [bookId] = useState(Math.random().toString(36).substr(2, 8));
+    //useeffect to get doctor details while loading the page 
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -44,6 +47,7 @@ const AddAppointment = () => {
             };
             fetchData();
           }, [id]);
+    //validation and api call made in handle add to add details to backend
           const handleAdd=async(e)=>{
             e.preventDefault();
             if (patientName === "") {
