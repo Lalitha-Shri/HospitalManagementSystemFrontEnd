@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { isAdminUser, isDoctorUser, isLoggedInUser, logout } from './AuthService';
 
 const HeaderComponent = () => {
+  //styles for header
   const linkStyle = {
     margin: "1rem",
     textDecoration: "none",
@@ -20,6 +21,7 @@ const HeaderComponent = () => {
   const divstyle1 = {
     marginRight: "20px",
   };
+  //navigate to home page and clear session and local storage by calling logout function from Authservice
   const handleLogOut = () => {
       logout();
     navigate("/");
