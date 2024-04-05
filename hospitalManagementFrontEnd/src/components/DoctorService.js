@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { getToken } from './AuthService';
+//interceptor is to add token to header for each api call made
 axios.interceptors.request.use(function (config) {
     config.headers["Authorization"]=getToken();
     return config;
