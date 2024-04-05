@@ -4,6 +4,7 @@ import { addDoctor } from './DoctorService';
 import Swal from "sweetalert2";
 
 const AddDoctor = () => {
+  //React hooks
   const navigate = useNavigate();
   const [doctorName, setDoctorName] = useState("");
   const [specialist, setSpecialist] = useState("");
@@ -12,7 +13,7 @@ const AddDoctor = () => {
   const [age, setAge] = useState();
   const [contactNo, setContact] = useState();
   const [error, setError] = useState(false);
-
+//validation of forms and api call to add doctor details is done in adddoc funtion when add button is clicked
   const addDoc = async (e) => {
     e.preventDefault();
     const doc = {
