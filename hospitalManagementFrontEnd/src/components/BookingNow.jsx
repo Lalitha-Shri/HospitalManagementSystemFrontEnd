@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { getAllDoctor } from './DoctorService';
 
 const BookingNow = () => {
+    //React Hook
     const [doctors, setDoctor] = useState([]);
     const navigate=useNavigate();
+    //when Book appointment button is clicked calls booknow function
     const handleBookNow=(id)=>{
        navigate(`/addAppointment/${id}`); 
     }
+    //useEffect to load all the doctors list to display
     useEffect(() => {
       listDoctor();
     }, []);
