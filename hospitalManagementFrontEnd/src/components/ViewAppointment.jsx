@@ -3,6 +3,7 @@ import { cancelAppointment, getAllAppointment } from './Booking';
 import Swal from "sweetalert2";
 
 const ViewPrescription = () => {
+    //React hooks
     const[appointment,setAppointment]=useState([]);
     const [cancelStatus, setCancelStat] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
