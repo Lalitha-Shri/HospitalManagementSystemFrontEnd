@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { getDoctor, updateDoctor } from './DoctorService';
 import Swal from "sweetalert2";
 const UpdateDoctor = () => {
+    //React hook
     const navigate = useNavigate();
     const [doctorName, setDoctorName] = useState("");
     const [specialist, setSpecialist] = useState("");
@@ -11,6 +12,7 @@ const UpdateDoctor = () => {
     const [age, setAge] = useState();
     const [contactNo, setContact] = useState();
     const {id}=useParams();
+    //make update api call to update doctor to Db
     const updateDoc = async (e) => {
         e.preventDefault();
         const doc = {
