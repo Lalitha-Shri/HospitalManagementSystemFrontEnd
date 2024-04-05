@@ -3,8 +3,10 @@ import { deleteDoctor, getAllDoctor } from "./DoctorService";
 import { useNavigate } from "react-router-dom";
 
 const DoctorComponent = () => {
+  //react hook
   const [doctors, setDoctor] = useState([]);
   const navigate=useNavigate();
+  //useEffect to get list of doctors while loading the page
   useEffect(() => {
     listDoctor();
   }, []);
@@ -18,9 +20,11 @@ const DoctorComponent = () => {
       console.error(error);
     }
   };
+  //when update button is called this will navigate to UpdateDoctor component
   const handleUpdate = (id) => {
     navigate(`/update-doctor/${id}`);
   };
+  //delete the doctor from list
   const handleDelete = async (id) => {
     try {
       const response = await deleteDoctor(id);
