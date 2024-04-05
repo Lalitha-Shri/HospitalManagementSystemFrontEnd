@@ -7,20 +7,25 @@ import { useNavigate } from 'react-router-dom'
 import patient from './images/patient.png'
 import germs from './images/germs.png'
 const PatientDashboard = () => {
+  //React hook
   const navigate=useNavigate();
+  //when Book Appointmnet button is clicked navugate to BookingNow component
   const bookNow=(e)=>{
     e.preventDefault();
     navigate("/bookNow");
   
   }
+   //when view Appointmnet button is clicked navigate to ViewAppointment component
   const handleViewAppointment=(e)=>{
     e.preventDefault();
     navigate("/viewAppointment");
   }
+  //when view Prescription button is clicked navigate to ViewPrescriptions component
   const handleViewPrescription=(e)=>{
     e.preventDefault();
     navigate("/viewPrescription");
   }
+   //when view Guidelines button is clicked navigate to ViewGuidelines component
   const handleGuideline=(e)=>{
     e.preventDefault();
     navigate("/viewGuidelines");
